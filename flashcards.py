@@ -19,7 +19,7 @@ class Flashcards:
     def set_deck(self,deck):
         self.deck = deck or self.ini_deck
         import os
-        deck_file = "decks/%s.json" % (self.deck)
+        deck_file = "static/decks/%s.json" % (self.deck)
         if not os.path.exists(deck_file):
             self.json = None
             self.cards = None
