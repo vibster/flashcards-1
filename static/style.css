@@ -1,0 +1,16 @@
+body {
+  text-align:center;
+  font-family:"Hiragino Kaku Gothic Std","MS Gothic", "MS Mincho", "serif";
+}
+#ja {
+  font-size:5em;
+}
+#rj { 
+  font-size:4em;
+  color:#3E4349;
+}
+#en {
+  font-size:3em;
+  color:silver;
+  font-style:italic;
+}

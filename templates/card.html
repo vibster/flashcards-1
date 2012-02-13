@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
+<script src="{{base}}/static/script.js"></script>
+{% if ini == "ja" %}<title>{{card.ja}}</title>{% endif %}
+{% if ini == "rj" %}<title>{{card.rj}}</title>{% endif %}
+{% if ini == "en" %}<title>{{card.en}}</title>{% endif %}
+</head>
+<body onload="init('{{ini}}');">
+<div id="card">
+<div id="buttons">
+{% if ini != "ja" %}
+    <input type="button" onclick="toggle('ja');" value="Japanese"/>
+{% endif %}
+{% if ini != "rj" %}
+    <input type="button" onclick="toggle('rj');" value="Romaji"/>
+{% endif %}
+{% if ini != "en" %}
+    <input type="button" onclick="toggle('en');" value="English"/>
+{% endif %}
+</div>
+<div id="ja" style="display:none;">{{ card.ja }}</div>
+<div id="rj" style="display:none;">{{ card.rj }}</div>
+<div id="en" style="display:none;">{{ card.en }}</div>
+</div>
+</body>
