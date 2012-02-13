@@ -35,7 +35,10 @@ class Flashcards:
         if not self.cards:
             self.card = None
             return 
-        self.card = self.cards[random.randint(0,len(self.deck)-1)]
+        num = random.randint(0,len(self.cards)-1)
+        self.card = self.cards[num]
+        self.card['num'] = num+1
+        self.card['count'] = len(self.cards)
 
     def dict_href(self):
         import urllib
