@@ -8,6 +8,11 @@
 </head>
 <body onload="init('{{ini}}');">
 <div id="card">
+<div id="source">
+{{meta.source}}<br />
+Section:{{meta.section}} 
+Level:{{meta.level}}
+</div>
 <div id="buttons">
 {% if ini != "ja" %}
     <input type="button" onclick="toggle('ja');" value="Japanese"/>

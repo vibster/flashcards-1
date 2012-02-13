@@ -2,6 +2,11 @@ body {
   text-align:center;
   font-family:"Hiragino Kaku Gothic Std","MS Gothic", "MS Mincho", "serif";
 }
+#source {
+  font-family:Verdana,Arial,Helvetica;
+  font-size:0.6em;
+  padding:1.0em;
+}
 #ja {
   font-size:5em;
 }
