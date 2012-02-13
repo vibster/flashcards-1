@@ -2,11 +2,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
 <script src="{{base}}/static/script.js"></script>
-{% if ini == "ja" %}<title>{{card.ja}}</title>{% endif %}
-{% if ini == "rj" %}<title>{{card.rj}}</title>{% endif %}
-{% if ini == "en" %}<title>{{card.en}}</title>{% endif %}
+<title>Flashcards: {{meta.deck}}</title>
 </head>
-<body onload="init('{{ini}}');">
+<body onload="init('{{clue}}');">
 <div id="card">
 <div id="source">
 {{meta.source}}<br />
@@ -14,15 +12,16 @@ Section:{{meta.section}}
 Level:{{meta.level}}
 </div>
 <div id="buttons">
-{% if ini != "ja" %}
+{% if clue != "ja" %}
     <input type="button" onclick="toggle('ja');" value="Japanese"/>
 {% endif %}
-{% if ini != "rj" %}
+{% if clue != "rj" %}
     <input type="button" onclick="toggle('rj');" value="Romaji"/>
 {% endif %}
-{% if ini != "en" %}
+{% if clue != "en" %}
     <input type="button" onclick="toggle('en');" value="English"/>
 {% endif %}
+<span id="dict"><a target="_blank" href="{{meta.dict}}">dict</a></span>
 </div>
 <div id="ja" style="display:none;">{{ card.ja }}</div>
 <div id="rj" style="display:none;">{{ card.rj }}</div>

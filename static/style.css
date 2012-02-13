@@ -7,6 +7,8 @@ body {
   font-size:0.6em;
   padding:1.0em;
 }
+#dict { padding:0 0.6em; } 
+#dict A { text-decoration:none; }
 #ja {
   font-size:5em;
 }
