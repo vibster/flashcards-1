@@ -16,7 +16,6 @@ the deck {lang} is the default clue. reload to shuffle!
 
 # TODO
 
-    [ ] ajax _dict_ link
     [ ] make "lang" abstract, i.e. "subj", "subjstr"
     [ ] consider ordered "clues" member in deck JSON
     [ ] keyboard shortcuts

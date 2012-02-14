@@ -54,6 +54,7 @@ var flashcards = function(rand) {
 	    html = this.cards[this.order[this.mark]][clue];
             $("div#"+clue).html(html);
 	}
+	this.setDictLink()
     }
     this.setMarkNext = function() {
 	if ( this.mark >= this.order.length-1 ) {
@@ -72,6 +73,29 @@ var flashcards = function(rand) {
 	}
 	$("span#num").html(this.mark+1);
 	this.setOrderHtml();
+    }
+    this.dictHref = function(lang,term) {
+        term = encodeURIComponent(term);
+        if (lang=="ja") {
+            base="http://jisho.org";
+            args="words?jap="+term+"&eng=&dict=edict";
+            return base+"/"+args;
+        }
+        if (lang=="zh") {
+            base="http://www.mdbg.net";
+            args="chindict/chindict.php?page=worddict&wdrst=1&wdqb="+term;
+            return base+"/"+args;
+        }
+        return false;
+    }
+    this.setDictLink = function() {
+	lang = $("span#dict").attr("lang");
+	term = this.cards[this.order[this.mark]][lang];
+	href = this.dictHref(lang,term);
+	if (href) {
+   	    html = '<a target="_blank" href="'+href+'">dict</a>';
+	    $("span#dict").html(html);
+	}
     }
 }
 
