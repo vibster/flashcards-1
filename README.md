@@ -3,16 +3,16 @@
 provide a "deck" (see format below) and choose to show any of the clue
 keys provided with buttons to toggle the other keys.
 
-    http://example.com/<deck>/<clue>
+    http://localhost/<deck>/[clue]
 
-let's say for instance you'd like to practice writing the characters
-for the words in level 1, section 1 of Japanese source "A", then you
-could choose the Romaji (rj) clue and get toggle buttons for Japanese
-(ja) and English (en) with: 
+let's say you'd like to practice writing the characters for the words
+in level 1, section 1 of Japanese source "A", then you could choose
+the Romaji [la] (latin romanization) clue and get toggle buttons for
+Japanese [ja] and English [en] with:
 
-    http://example.com/ja-a-1-1/rj
+    http://localhost/ja-a-1-1/rj
 
-reload to shuffle!
+the deck {lang} is the default clue. reload to shuffle!
 
 # TODO
 
