@@ -1,13 +1,14 @@
 <!DOCTYPE HTML>
 <head>
+<title>Flashcards: {{meta.deck}} ({{card.count}})</title>
 <link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
 <script src="{{base}}/static/jquery.js"></script>
 <script src="{{base}}/static/script.js"></script>
-<title>Flashcards: {{meta.deck}}</title>
 </head>
-<body onload="init('{{clue}}');">
-<div id="card">
+<body>
+<div id="card" deck="{{meta.deck}}" clue="{{clue}}">
 <div id="source">{{meta.source}}</div>
+
 <div id="pager">
  Section:{{meta.section}} 
  Level:{{meta.level}}
@@ -15,24 +16,27 @@
  <input type="button" id="prev" value="prev"></input>
  <input type="button" id="next" value="next"></input>
 </div>
+
 <div id="buttons">
-{% if clue != "ja" %}
-    <input type="button" onclick="toggle('ja');" value="Japanese"/>
-{% endif %}
-{% if clue != "rj" %}
-    <input type="button" onclick="toggle('rj');" value="Romaji"/>
-{% endif %}
-{% if clue != "en" %}
-    <input type="button" onclick="toggle('en');" value="English"/>
-{% endif %}
-<span id="dict">
-<a target="_blank" href="{{meta.dict}}">dict</a>
-</span>
+{% for cl in card.clues %}
+    {% if not clue==cl %}
+        <input type="button" onclick="toggle('{{cl}}');" value="{{cl}}"/>
+    {% endif %}
+{% endfor %}
+<span id="dict"><a target="_blank" href="{{meta.dict}}">dict</a></span>
 </div>
-<div id="ja" style="display:none;"></div>
-<div id="rj" style="display:none;"></div>
-<div id="en" style="display:none;"></div>
+
+<!-- clue on top -->
+<div id="{{clue}}" class="clue"></div>
+
+{% for cl in card.clues %}
+    {% if not cl==clue %}
+        <div id="{{cl}}" style="display:none;"></div>
+    {% endif %}
+{% endfor %}
+
 <div id="order"></div>
 <div id="msg"></div>
+
 </div>
 </body>

@@ -1,6 +1,11 @@
 body {
+}
+div#card {
   text-align:center;
-  font-family:"Hiragino Kaku Gothic Std","MS Gothic", "MS Mincho", "serif";
+}
+div#index {
+    margin-left:25%;
+    width:50%;
 }
 #source,#pager,#order {
   font-family:Verdana,Arial,Helvetica;
@@ -11,7 +16,11 @@ body {
 #dict { padding:0.6em; } 
 #dict A { text-decoration:none; }
 #ja {
-  font-size:5em;
+  font-family:"Hiragino Kaku Gothic Std","serif";
+}
+#zh {
+  font-family:"Kai","serif";
+  font-size:10em;
 }
 #rj { 
   font-size:4em;
@@ -21,6 +30,10 @@ body {
   font-size:3em;
   color:silver;
   font-style:italic;
+}
+.clue {
+  font-size:6em;
+  font-weight:bold;
 }
 #order {
   padding:1em;

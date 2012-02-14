@@ -1,3 +1,11 @@
+var keys = function(obj) {
+    var k = [];
+    for (var key in obj) {
+	k.push(key);
+    }
+    return k;
+}
+
 var flashcards = function(rand) {
     this.rand=true;
     if (rand==false) { this.rand=false; }
@@ -40,9 +48,12 @@ var flashcards = function(rand) {
 	this.deck=url;
     }
     this.putCard = function() {
-        $("div#ja").html(this.cards[this.order[this.mark]].ja);
-        $("div#rj").html(this.cards[this.order[this.mark]].rj);
-        $("div#en").html(this.cards[this.order[this.mark]].en);
+	var clues = keys(this.cards[this.order[this.mark]]);
+	for (var i in clues) {
+	    clue = clues[i];
+	    html = this.cards[this.order[this.mark]][clue];
+            $("div#"+clue).html(html);
+	}
     }
     this.setMarkNext = function() {
 	if ( this.mark >= this.order.length-1 ) {
@@ -64,10 +75,37 @@ var flashcards = function(rand) {
     }
 }
 
-function init(id) {
-    document.getElementById(id).style.display="block";
+function init() {
+    var deck = $("div#card").attr("deck");
+    fc.setDeck(deckbase+'/'+deck+'.json');
     return true;
 }
+
+var base=window.location.origin;
+var deckbase=base+"/static/decks"
+var fc = new flashcards();
+
+$(document).ready(function() {
+
+    init();
+
+    var r = $.getJSON(fc.deck, function(data) { fc.setJSON(data); })
+        .success(function() {})
+	.error(function(err) { alert('ERR: could not load deck: '+fc.deck) });
+
+    $("input#next").click(function() {
+	if (fc.cards==null) { $("div#msg").html('hmph!'); return false; }
+	fc.setMarkNext();
+	fc.putCard();
+    });
+
+    $("input#prev").click(function() {
+	if (fc.cards==null) { $("div#msg").html("hmph!"); return false; }
+	fc.setMarkPrev();
+	fc.putCard();
+    });
+
+});
 
 function toggle(id) {
     e = document.getElementById(id);
@@ -79,22 +117,3 @@ function toggle(id) {
     return true;
 }
 
-$(document).ready(function() {
-
-    fc = new flashcards();
-    fc.setDeck('http://127.0.0.1:5000/static/decks/ja-a-1-1.json');
-    var r = $.getJSON(fc.deck, function(data) { fc.setJSON(data); })
-        .success(function() {})
-	.error(function() {alert('OOPS!');});
-    $("input#next").click(function() {
-	if (fc.cards==null) { $("div#msg").html('hmph!'); return false; }
-	fc.setMarkNext();
-	fc.putCard();
-    });
-    $("input#prev").click(function() {
-	if (fc.cards==null) { $("div#msg").html("hmph!"); return false; }
-	fc.setMarkPrev();
-	fc.putCard();
-    });
-
-});
