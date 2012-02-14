@@ -1,3 +1,5 @@
+# flashcards
+
 provide a "deck" (see format below) and choose to show any of the clue
 keys provided with buttons to toggle the other keys.
 
@@ -11,6 +13,14 @@ could choose the Romaji (rj) clue and get toggle buttons for Japanese
     http://example.com/ja-a-1-1/rj
 
 reload to shuffle!
+
+# TODO
+
+    [ ] ajax _dict_ link
+    [ ] make "rj" abstract, i.e. "la" for romanization (latin)
+    [ ] make "lang" abstract, i.e. "subj", "subjstr"
+    [ ] consider ordered "clues" member in deck JSON
+
 
 ## deck format
 
