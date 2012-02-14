@@ -2,12 +2,13 @@ body {
   text-align:center;
   font-family:"Hiragino Kaku Gothic Std","MS Gothic", "MS Mincho", "serif";
 }
-#source {
+#source,#pager,#order {
   font-family:Verdana,Arial,Helvetica;
-  font-size:0.6em;
-  padding:1.0em;
 }
-#dict { padding:0 0.6em; } 
+#buttons {
+  padding:1em;
+}
+#dict { padding:0.6em; } 
 #dict A { text-decoration:none; }
 #ja {
   font-size:5em;
@@ -21,3 +22,8 @@ body {
   color:silver;
   font-style:italic;
 }
+#order {
+  padding:1em;
+  color:silver;
+}
+b.bold { color:black; } 

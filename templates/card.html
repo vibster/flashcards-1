@@ -1,16 +1,19 @@
 <!DOCTYPE HTML>
 <head>
 <link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
+<script src="{{base}}/static/jquery.js"></script>
 <script src="{{base}}/static/script.js"></script>
 <title>Flashcards: {{meta.deck}}</title>
 </head>
 <body onload="init('{{clue}}');">
 <div id="card">
-<div id="source">
-{{meta.source}}<br />
-Section:{{meta.section}} 
-Level:{{meta.level}}
-({{card.num}}/{{card.count}})
+<div id="source">{{meta.source}}</div>
+<div id="pager">
+ Section:{{meta.section}} 
+ Level:{{meta.level}}
+ (<span id="num"></span>/<span id="count"></span>)
+ <input type="button" id="prev" value="prev"></input>
+ <input type="button" id="next" value="next"></input>
 </div>
 <div id="buttons">
 {% if clue != "ja" %}
@@ -22,10 +25,14 @@ Level:{{meta.level}}
 {% if clue != "en" %}
     <input type="button" onclick="toggle('en');" value="English"/>
 {% endif %}
-<span id="dict"><a target="_blank" href="{{meta.dict}}">dict</a></span>
+<span id="dict">
+<a target="_blank" href="{{meta.dict}}">dict</a>
+</span>
 </div>
-<div id="ja" style="display:none;">{{ card.ja }}</div>
-<div id="rj" style="display:none;">{{ card.rj }}</div>
-<div id="en" style="display:none;">{{ card.en }}</div>
+<div id="ja" style="display:none;"></div>
+<div id="rj" style="display:none;"></div>
+<div id="en" style="display:none;"></div>
+<div id="order"></div>
+<div id="msg"></div>
 </div>
 </body>
