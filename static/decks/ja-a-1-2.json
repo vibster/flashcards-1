@@ -4,13 +4,13 @@
 "version":"2012",
 "cards": 
 [
-{"ja":"かぜ","rj":"kaze","en":"cold or wind"},
-{"ja":"ちず","rj":"chizu","en":"map"},
-{"ja":"てつ","rj":"tetsu","en":"metal"},
-{"ja":"だいく","rj":"daiku","en":"carpenter"},
-{"ja":"どだち","rj":"sodachi","en":"upbringings"},
-{"ja":"おせじ","rj":"oseji","en":"flattery"},
-{"ja":"とさつ","rj":"tosatsu","en":"slaughter"},
-{"ja":"でぐち","rj":"deguchi","en":"exit"}
+{"ja":"かぜ","la":"kaze","en":"cold or wind"},
+{"ja":"ちず","la":"chizu","en":"map"},
+{"ja":"てつ","la":"tetsu","en":"metal"},
+{"ja":"だいく","la":"daiku","en":"carpenter"},
+{"ja":"どだち","la":"sodachi","en":"upbringings"},
+{"ja":"おせじ","la":"oseji","en":"flattery"},
+{"ja":"とさつ","la":"tosatsu","en":"slaughter"},
+{"ja":"でぐち","la":"deguchi","en":"exit"}
 ]
 }

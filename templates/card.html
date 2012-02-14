@@ -7,11 +7,9 @@
 </head>
 <body>
 <div id="card" deck="{{meta.deck}}" clue="{{clue}}">
-<div id="source">{{meta.source}}</div>
+<div id="source">{{meta.source}} {{meta.level}}-{{meta.section}}</div>
 
 <div id="pager">
- Level:{{meta.level}}
- Section:{{meta.section}} 
  (<span id="num"></span>/<span id="count"></span>)
  <input type="button" id="prev" value="prev"></input>
  <input type="button" id="next" value="next"></input>

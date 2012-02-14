@@ -6,7 +6,7 @@ class Flashcards:
     lang_code = {'ja':"Japanese",
                  'zh':"Chinese",
                  'en':"English",
-                 'rj':"Romaji"}
+                 'la':"Roman"}
 
     def __init__(self,deck,clue):
         if not deck and not clue:

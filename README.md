@@ -17,10 +17,9 @@ reload to shuffle!
 # TODO
 
     [ ] ajax _dict_ link
-    [ ] make "rj" abstract, i.e. "la" for romanization (latin)
     [ ] make "lang" abstract, i.e. "subj", "subjstr"
     [ ] consider ordered "clues" member in deck JSON
-
+    [ ] keyboard shortcuts
 
 ## deck format
 
@@ -32,7 +31,7 @@ reload to shuffle!
       "cards":
       [
         { "ja":"日本語", 
-          "rj":"romaji",
+          "la":"latin (romaji)",
           "en":"english" },
       ]
     }

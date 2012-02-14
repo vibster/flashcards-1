@@ -4,13 +4,13 @@
 "version":"2012",
 "cards": 
 [
-{"ja":"あい","rj":"ai","en":"love"},
-{"ja":"あう","rj":"au","en":"to meet"},
-{"ja":"え","rj":"e","en":"painting"},
-{"ja":"くぎ","rj":"kugi","en":"nail"},
-{"ja":"かお","rj":"kao" ,"en":"face"},
-{"ja":"ごご","rj":"gogo","en":"p.m./afternoon"},
-{"ja":"こけ","rj":"koke","en":"moss"},
-{"ja":"きげき","rj":"kigeki", "en":"comedy"}
+{"ja":"あい","la":"ai","en":"love"},
+{"ja":"あう","la":"au","en":"to meet"},
+{"ja":"え","la":"e","en":"painting"},
+{"ja":"くぎ","la":"kugi","en":"nail"},
+{"ja":"かお","la":"kao" ,"en":"face"},
+{"ja":"ごご","la":"gogo","en":"p.m./afternoon"},
+{"ja":"こけ","la":"koke","en":"moss"},
+{"ja":"きげき","la":"kigeki", "en":"comedy"}
 ]
 }

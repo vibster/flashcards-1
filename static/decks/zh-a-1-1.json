@@ -4,12 +4,12 @@
 "version":"2012",
 "cards": 
 [
-{"zh":"你","rj":"nǐ","en":"you (sing.)"},
-{"zh":"好","rj":"hǎo","en":"good, well"},
-{"zh":"嗎","rj":"ma","en":"interrogative particle"},
-{"zh":"我","rj":"wǒ","en":"I, me"},
-{"zh":"很","rj":"hěn","en":"very"},
-{"zh":"呢","rj":"ne","en":"a modal particle"},
-{"zh":"也","rj":"yě","en":"also, too"}
+{"zh":"你","la":"nǐ","en":"you (sing.)"},
+{"zh":"好","la":"hǎo","en":"good, well"},
+{"zh":"嗎","la":"ma","en":"interrogative particle"},
+{"zh":"我","la":"wǒ","en":"I, me"},
+{"zh":"很","la":"hěn","en":"very"},
+{"zh":"呢","la":"ne","en":"a modal particle"},
+{"zh":"也","la":"yě","en":"also, too"}
 ]
 }
