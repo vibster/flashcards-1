@@ -13,7 +13,8 @@
         <h1>{{deck.meta.langstr}}</h1>
         <ul>
     {% endif %}
-    <li><a href="{{deck.key}}">{{deck.key}}</a>
+    <li><a href="{{deck.key}}">{{deck.key}}</a> 
+    ({{deck.meta.count}})</li>
     {% set prev_lang=deck.meta.lang %}
     {% set count=count+1 %}
 {% endfor %}

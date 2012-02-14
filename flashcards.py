@@ -73,7 +73,8 @@ class Flashcards:
                      'section':self.deck.split('-')[3],
                      'lang'   :self.lang,
                      'langstr':self.lang_code[self.lang],
-                     'dict'   :self.dict_href()}
+                     'dict'   :self.dict_href(),
+                     'count'  :len(self.cards)}
         
     def putcard(self):
         if not self.card:
