@@ -10,6 +10,8 @@ could choose the Romaji (rj) clue and get toggle buttons for Japanese
 
     http://example.com/ja-a-1-1/rj
 
+reload to shuffle!
+
 ## deck format
 
     decks/{lang}-{source}-{level}-{section}.json:
