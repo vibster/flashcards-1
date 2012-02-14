@@ -39,7 +39,7 @@ reload to shuffle!
 
 ## screenshot
 
-![screen](http://www.archive.org/download/siznax.docs/flashcards.png)
+![screen](https://github.com/siznax/flashcards/blob/master/static/screen.png)
 
 
 siznax 2012
