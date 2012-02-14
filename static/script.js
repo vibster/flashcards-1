@@ -132,11 +132,11 @@ $(document).ready(function() {
 });
 
 function toggle(id) {
-    e = document.getElementById(id);
-    if (e.style.display == "none") {
-        e.style.display="block";
+    var display = $("div#"+id).css("display");
+    if ( display == "none") {
+        $("div#"+id).css("display","block");
     } else {
-        e.style.display="none";
+        $("div#"+id).css("display","none");
     }
     return true;
 }
