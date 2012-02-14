@@ -15,14 +15,14 @@ var flashcards = function(rand) {
     }
     this.setOrder = function() {
 	var order = [];
-	for (i=0;i<this.json.cards.length;i++) { order[i] = i; }
+	for (i=0;i<this.cards.length;i++) { order[i] = i; }
 	if (this.rand==true) {
 	    this.order = order.sort(function() {return 0.5 - Math.random()});
 	} else {
 	    this.order = order;
 	}
         $("span#num").html(this.mark+1);
-        $("span#count").html(this.order.length);
+        $("span#count").html(this.cards.length);
 	this.setOrderHtml();
     }
     this.orderHtml = function() {
@@ -30,7 +30,7 @@ var flashcards = function(rand) {
 	for (i=0;i<this.order.length;i++) {
 	    d[i] = (this.order[i]+1).toString();
 	}
-	d[this.mark] = "<b class=\"bold\">" + d[this.mark] + "</b>";
+	d[this.mark] = "<b>" + d[this.mark] + "</b>";
 	return d.join(" ");
     }
     this.setOrderHtml = function() {
