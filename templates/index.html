@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+<title>flashcards</title>
+<link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
+</head>
+<body>
+<div id="index">
+{% set count=0 %}
+{% set prev_lang="" %}
+{% for deck in decks %}
+    {% if not deck.meta.lang == prev_lang %}
+        {% if count > 0 %}</ul>{% endif %}
+        <h1>{{deck.meta.langstr}}</h1>
+        <ul>
+    {% endif %}
+    <li><a href="{{deck.key}}">{{deck.key}}</a>
+    {% set prev_lang=deck.meta.lang %}
+    {% set count=count+1 %}
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
