@@ -2,9 +2,16 @@ from flask import render_template
 
 class Flashcards:
 
-    ini_deck = "ja-a-1-1"
+    # augmented ISO 639-1 (eventually, subject codes)
+    lang_code = {'ja':"Japanese",
+                 'zh':"Chinese",
+                 'en':"English",
+                 'rj':"Romaji"}
 
     def __init__(self,deck,clue):
+        if not deck and not clue:
+            self.base = "."
+            return 
         self.set_deck(deck)
         self.set_card()
         self.set_meta()
@@ -13,11 +20,9 @@ class Flashcards:
             self.base = "../.."
         if (deck and not clue) or (clue and not deck):
             self.base = ".."
-        if not deck and not clue:
-            self.base = "."
 
     def set_deck(self,deck):
-        self.deck = deck or self.ini_deck
+        self.deck = deck
         import os
         deck_file = "static/decks/%s.json" % (self.deck)
         if not os.path.exists(deck_file):
@@ -30,17 +35,22 @@ class Flashcards:
         self.cards = self.json["cards"]
         self.lang = self.deck.split('-')[0]
 
-    def set_card(self):
-        import random
+    def set_card(self,rand=False):
         if not self.cards:
             self.card = None
             return 
-        num = random.randint(0,len(self.cards)-1)
+        num = 0
+        if rand:
+            import random
+            num = random.randint(0,len(self.cards)-1)
         self.card = self.cards[num]
+        self.card['clues'] = self.card.keys()
         self.card['num'] = num+1
         self.card['count'] = len(self.cards)
-
+        
     def dict_href(self):
+        if not hasattr(self,'card'):
+            return None
         import urllib
         if self.lang == "ja":
             base = "http://jisho.org"
@@ -61,6 +71,8 @@ class Flashcards:
                      'srcref' :self.deck.split('-')[1],
                      'level'  :self.deck.split('-')[2],
                      'section':self.deck.split('-')[3],
+                     'lang'   :self.lang,
+                     'langstr':self.lang_code[self.lang],
                      'dict'   :self.dict_href()}
         
     def putcard(self):
@@ -71,3 +83,13 @@ class Flashcards:
                                base = self.base,
                                card = self.card,
                                meta = self.meta)
+
+    def putindex(self):
+        decks = list()
+        import glob
+        for fname in glob.glob("static/decks/*.json"):
+            key = fname.split('/')[-1].split('.')[0]
+            self.set_deck(key)
+            self.set_meta()
+            decks.append({'key':key,'meta':self.meta})
+        return render_template("index.html",base=self.base,decks=decks)

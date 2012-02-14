@@ -5,9 +5,13 @@ from flask import make_response
 app = Flask(__name__)
 
 @app.route('/')
+def index():
+    fc = Flashcards(None,None)
+    return fc.putindex()
+
 @app.route('/<deck>/')
 @app.route('/<deck>/<clue>/')
-def index(deck=None,clue=None):
+def deck(deck=None,clue=None):
     fc = Flashcards(deck,clue)
     return fc.putcard()
 
