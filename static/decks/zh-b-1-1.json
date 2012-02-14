@@ -1,0 +1,20 @@
+{
+"source":"Chinese Link 中文天地",
+"creator":"siznax",
+"version":"2012",
+"cards": 
+[
+{"zh":"你","la":"nǐ","en":"you"},
+{"zh":"好","la":"hǎo","en":"good, well"},
+{"zh":"是","la":"shì","en":"to be, yes"},
+{"zh":"學生","la":"xuésheng","en":"student"},
+{"zh":"學","la":"xué","en":"to learn"},
+{"zh":"嗎","la":"ma","en":"question terminal"},
+{"zh":"我","la":"wǒ","en":"I, me"},
+{"zh":"呢","la":"ne","en":"interrogative terminal"},
+{"zh":"也","la":"yě","en":"also"},
+{"zh":"他","la":"tā","en":"he, him"},
+{"zh":"不","la":"bù","en":"not, no"},
+{"zh":"老師","la":"lǎoshī","en":"teacher"}
+]
+}
