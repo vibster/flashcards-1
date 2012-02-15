@@ -7,10 +7,13 @@
 </head>
 <body>
 <div id="card" deck="{{meta.deck}}" clue="{{clue}}">
-<div id="source">{{meta.source}} {{meta.level}}-{{meta.section}}</div>
+<div id="source">
+<a href="../">{{meta.source}}</a>
+ {{meta.level}}-{{meta.section}}
+</div>
 
 <div id="pager">
- (<span id="num"></span>/<span id="count"></span>)
+ (<span id="num"></span>/<a href="{{base}}/{{meta.jsonurl}}"><span id="count"></span></a>)
  <input type="button" id="prev" value="prev"></input>
  <input type="button" id="next" value="next"></input>
 </div>

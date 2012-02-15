@@ -2,6 +2,8 @@ from flask import render_template
 
 class Flashcards:
 
+    decks_base = "static/decks"
+
     # augmented ISO 639-1 (eventually, subject codes)
     lang_code = {'ja':"Japanese",
                  'zh':"Chinese",
@@ -24,7 +26,7 @@ class Flashcards:
     def set_deck(self,deck):
         self.deck = deck
         import os
-        deck_file = "static/decks/%s.json" % (self.deck)
+        deck_file = "%s/%s.json" % (self.decks_base,self.deck)
         if not os.path.exists(deck_file):
             self.json = None
             self.cards = None
@@ -32,6 +34,7 @@ class Flashcards:
             return 
         import json
         self.json = json.load(open(deck_file,'r'))
+        self.jsonurl = self.decks_base + "/" + self.deck + ".json"
         self.cards = self.json["cards"]
         self.lang = self.deck.split('-')[0]
 
@@ -65,6 +68,7 @@ class Flashcards:
             self.meta = None
             return 
         self.meta = {'deck'   :self.deck,
+                     'jsonurl':self.jsonurl,
                      'source' :self.json["source"],
                      'creator':self.json["creator"],
                      'version':self.json["version"],
@@ -88,9 +92,13 @@ class Flashcards:
     def putindex(self):
         decks = list()
         import glob
-        for fname in glob.glob("static/decks/*.json"):
+        for fname in glob.glob("%s/*.json" % (self.decks_base)):
             key = fname.split('/')[-1].split('.')[0]
-            self.set_deck(key)
+            try:
+                self.set_deck(key)
+            except:
+                msg = "ERROR: could not load %s" % (self.deck)
+                return render_template("error.html",msg=msg)
             self.set_meta()
             decks.append({'key':key,'meta':self.meta})
         return render_template("index.html",base=self.base,decks=decks)
