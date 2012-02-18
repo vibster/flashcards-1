@@ -5,6 +5,7 @@
 </head>
 <body>
 <div id="index">
+flashcards
 {% set count=0 %}
 {% set prev_lang="" %}
 {% for deck in decks %}
@@ -14,7 +15,9 @@
         <ul>
     {% endif %}
     <li><a href="{{deck.key}}">{{deck.key}}</a> 
-    ({{deck.meta.count}})</li>
+    ({{deck.meta.count}})
+    {{deck.meta.source}}
+    </li>
     {% set prev_lang=deck.meta.lang %}
     {% set count=count+1 %}
 {% endfor %}

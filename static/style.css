@@ -1,6 +1,9 @@
 body {
   font-family:Verdana,Arial,Helvetica;
 }
+A { 
+  text-decoration:none; 
+}
 div#card {
   text-align:center;
 }
@@ -17,9 +20,6 @@ div#index {
   padding:0.6em; 
   font-weight:bold; 
 } 
-#dict A { 
-  text-decoration:none; 
-}
 #ja {
   font-family:"Hiragino Kaku Gothic Std","serif";
 }

@@ -2,7 +2,7 @@ from flask import render_template
 
 class Flashcards:
 
-    decks_base = "static/decks"
+    root = "/Users/siznax/code/flashcards/static/decks"
 
     # augmented ISO 639-1 (eventually, subject codes)
     lang_code = {'ja':"Japanese",
@@ -12,21 +12,21 @@ class Flashcards:
 
     def __init__(self,deck,clue):
         if not deck and not clue:
-            self.base = "."
+            self.template_base = "."
             return 
         self.set_deck(deck)
         self.set_card()
         self.set_meta()
         self.clue = clue or self.deck.split('-')[0]
         if deck and clue:
-            self.base = "../.."
+            self.template_base = "../.."
         if (deck and not clue) or (clue and not deck):
-            self.base = ".."
+            self.template_base = ".."
 
     def set_deck(self,deck):
         self.deck = deck
         import os
-        deck_file = "%s/%s.json" % (self.decks_base,self.deck)
+        deck_file = "%s/%s.json" % (self.root,self.deck)
         if not os.path.exists(deck_file):
             self.json = None
             self.cards = None
@@ -34,7 +34,7 @@ class Flashcards:
             return 
         import json
         self.json = json.load(open(deck_file,'r'))
-        self.jsonurl = self.decks_base + "/" + self.deck + ".json"
+        self.jsonurl ="static/decks/" + self.deck + ".json"
         self.cards = self.json["cards"]
         self.lang = self.deck.split('-')[0]
 
@@ -85,14 +85,14 @@ class Flashcards:
             return render_template('404.html'), 404
         return render_template("card.html",
                                clue = self.clue,
-                               base = self.base,
+                               base = self.template_base,
                                card = self.card,
                                meta = self.meta)
 
     def putindex(self):
         decks = list()
         import glob
-        for fname in glob.glob("%s/*.json" % (self.decks_base)):
+        for fname in glob.glob("%s/*.json" % (self.root)):
             key = fname.split('/')[-1].split('.')[0]
             try:
                 self.set_deck(key)
@@ -101,4 +101,6 @@ class Flashcards:
                 return render_template("error.html",msg=msg)
             self.set_meta()
             decks.append({'key':key,'meta':self.meta})
-        return render_template("index.html",base=self.base,decks=decks)
+        return render_template("index.html",
+                               base=self.template_base,
+                               decks=decks)

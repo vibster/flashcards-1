@@ -1,8 +1,5 @@
-from flashcards import Flashcards
-
-from flask import Flask
-from flask import make_response
-app = Flask(__name__)
+from flashcards import app # __init__.py
+from lib import Flashcards
 
 @app.route('/')
 def index():

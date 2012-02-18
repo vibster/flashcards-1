@@ -106,7 +106,7 @@ function init() {
 }
 
 var base=window.location.origin;
-var deckbase=base+"/static/decks"
+var deckbase=base+"/flashcards/static/decks"
 var fc = new flashcards();
 
 $(document).ready(function() {
