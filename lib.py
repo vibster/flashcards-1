@@ -92,7 +92,8 @@ class Flashcards:
     def putindex(self):
         decks = list()
         import glob
-        for fname in glob.glob("%s/*.json" % (self.root)):
+        dfiles = sorted(glob.glob("%s/*.json" % (self.root)))
+        for fname in dfiles:
             key = fname.split('/')[-1].split('.')[0]
             try:
                 self.set_deck(key)
