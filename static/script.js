@@ -1,3 +1,7 @@
+var base=window.location.origin;
+deckbase=base+"/static/decks"
+// var deckbase=base+"/flashcards/static/decks"
+
 var keys = function(obj) {
     var k = [];
     for (var key in obj) {
@@ -105,8 +109,6 @@ function init() {
     return true;
 }
 
-var base=window.location.origin;
-var deckbase=base+"/flashcards/static/decks"
 var fc = new flashcards();
 
 $(document).ready(function() {
