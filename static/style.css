@@ -8,8 +8,8 @@ div#card {
   text-align:center;
 }
 div#index {
-    margin-left:25%;
-    width:50%;
+  padding-left:15%;
+  width:65%;
 }
 #source,#pager,#order { 
 }
