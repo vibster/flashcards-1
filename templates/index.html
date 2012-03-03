@@ -15,6 +15,11 @@
         <ul>
     {% endif %}
     <li><a href="{{base}}/{{deck.key}}">{{deck.key}}</a> 
+    {% for clue in deck.meta.clues %}
+        {% if not clue == deck.meta.lang %}
+            | <a href="{{base}}/{{deck.key}}/{{clue}}">{{clue}}</a>
+        {% endif %}
+    {% endfor %}
     ({{deck.meta.count}})
     {{deck.meta.source}}
     </li>

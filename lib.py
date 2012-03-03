@@ -75,7 +75,8 @@ class Flashcards:
                      'lang'   :self.lang,
                      'langstr':self.lang_code[self.lang],
                      'dict'   :self.dict_href(),
-                     'count'  :len(self.cards)}
+                     'count'  :len(self.cards),
+                     'clues'  :self.cards[0].keys()}
         
     def putcard(self):
         if not self.card:
