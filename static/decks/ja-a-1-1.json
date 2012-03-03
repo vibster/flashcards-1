@@ -4,13 +4,30 @@
 "version":"2012",
 "cards": 
 [
-{"ja":"あい","la":"ai","en":"love"},
-{"ja":"あう","la":"au","en":"to meet"},
-{"ja":"え","la":"e","en":"painting"},
-{"ja":"くぎ","la":"kugi","en":"nail"},
-{"ja":"かお","la":"kao" ,"en":"face"},
-{"ja":"ごご","la":"gogo","en":"p.m./afternoon"},
-{"ja":"こけ","la":"koke","en":"moss"},
-{"ja":"きげき","la":"kigeki", "en":"comedy"}
+{"ja":"かがく","la":"kagaku","en":"science, chemistr"},
+{"ja":"うき","la":"uki","en":"a float, rainy season"},
+{"ja":"ごがく","la":"gogaku","en":"language"},
+{"ja":"けが","la":"kega","en":"injury/wound"},
+{"ja":"うえき","la":"ueki","en":"plants"},
+{"ja":"ぎかい","la":"gikai","en":"assembly"},
+{"ja":"うかい","la":"ukai","en":"detour"},
+{"ja":"げか","la":"geka","en":"surgery"},
+{"ja":"かき","la":"kaki","en":"oyster, persimmons"},
+{"ja":"きかく","la":"kikaku","en":"plan/project, a standard"},
+{"ja":"かけ","la":"kake","en":"gambling"},
+{"ja":"きが","la":"kiga","en":"hunger/starvation"},
+{"ja":"きかい","la":"kikai","en":"machine, opportunity"},
+{"ja":"いか","la":"ika","en":"octopus, less than"},
+{"ja":"おけ","la":"oke","en":"pail/bucket"},
+{"ja":"いけ","la":"ike","en":"ponds/lakes"},
+{"ja":"がいこく","la":"gaikoku","en":"foreign countries"},
+{"ja":"おくがい","la":"okugai","en":"outside"},
+{"ja":"あいかぎ","la":"aikagi","en":"spare key"},
+{"ja":"かかく","la":"kakaku","en":"price/cost"},
+{"ja":"おこげ","la":"okoge","en":"burn/scorch (rice)"},
+{"ja":"かげき","la":"kageki","en":"radical/extreme, opera"},
+{"ja":"かいがい","la":"kaigai","en":"overseas"},
+{"ja":"くいけ","la":"kuike","en":"appetite"},
+{"ja":"きがえ","la":"kigae","en":"a change of clothes"}
 ]
 }
