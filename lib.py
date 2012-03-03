@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request
 
 class Flashcards:
 
@@ -11,17 +11,14 @@ class Flashcards:
                  'la':"Roman"}
 
     def __init__(self,deck,clue):
+        self.msg = None # {'path':request.path,'script_root':request.script_root}
+        self.template_base = request.script_root
         if not deck and not clue:
-            self.template_base = "."
             return 
         self.set_deck(deck)
         self.set_card()
         self.set_meta()
         self.clue = clue or self.deck.split('-')[0]
-        if deck and clue:
-            self.template_base = "../.."
-        if (deck and not clue) or (clue and not deck):
-            self.template_base = ".."
 
     def set_deck(self,deck):
         self.deck = deck
@@ -84,6 +81,7 @@ class Flashcards:
         if not self.card:
             return render_template('404.html'), 404
         return render_template("card.html",
+                               msg  = self.msg,
                                clue = self.clue,
                                base = self.template_base,
                                card = self.card,
@@ -103,5 +101,6 @@ class Flashcards:
             self.set_meta()
             decks.append({'key':key,'meta':self.meta})
         return render_template("index.html",
-                               base=self.template_base,
-                               decks=decks)
+                               msg = self.msg,
+                               base = self.template_base,
+                               decks = decks)

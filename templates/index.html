@@ -5,6 +5,7 @@
 </head>
 <body>
 <div id="index">
+{% if msg %}<div id="msg">{{msg}}</div>{% endif %}
 {% set count=0 %}
 {% set prev_lang="" %}
 {% for deck in decks %}
@@ -13,7 +14,7 @@
         <h1>{{deck.meta.langstr}}</h1>
         <ul>
     {% endif %}
-    <li><a href="{{deck.key}}">{{deck.key}}</a> 
+    <li><a href="{{base}}/{{deck.key}}">{{deck.key}}</a> 
     ({{deck.meta.count}})
     {{deck.meta.source}}
     </li>

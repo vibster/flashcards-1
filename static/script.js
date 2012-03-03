@@ -1,6 +1,6 @@
 var base=window.location.origin;
-deckbase=base+"/static/decks"
-// var deckbase=base+"/flashcards/static/decks"
+// var deckbase=base+"/static/decks"
+var deckbase=base+"/flashcards/static/decks"
 
 var keys = function(obj) {
     var k = [];
