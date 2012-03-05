@@ -9,7 +9,7 @@
 {% if msg %}<div id="msg">{{msg}}</div>{% endif %}
 <div id="card" deck="{{meta.deck}}" clue="{{clue}}">
 <div id="source">
-<a href="../">{{meta.source}}</a>
+<a href="{{base}}">{{meta.source}}</a>
  {{meta.level}}-{{meta.section}}
 </div>
 
@@ -33,7 +33,7 @@
 
 {% for cl in card.clues %}
     {% if not cl==clue %}
-        <div id="{{cl}}" style="display:none;"></div>
+        <div id="{{cl}}" style="display:none;" class="notclue"></div>
     {% endif %}
 {% endfor %}
 
