@@ -16,10 +16,10 @@
 {"ja":"かいしゃ","la":"kaisha","en":"company, the office"},
 {"ja":"めいし","la":"meishi","en":"business card"},
 {"ja":"じゅうしょ","la":"jūsho","en":"address"},
-{"ja":"でんわーばんごう","la":"denwa-bangō","en":"telephone number"},
+{"ja":"でんわばんごう","la":"denwa-bangō","en":"telephone number"},
 {"ja":"でんわ","la":"denwa","en":"telephone"},
 {"ja":"ばんごう","la":"bangō","en":"number"},
-{"ja":"めいるーあどれす","la":"mēru-adoresu","en":"e-mail address"},
+{"ja":"めいるあどれす","la":"mēru-adoresu","en":"e-mail address"},
 {"ja":"けいたい","la":"keitai","en":"cell phone"},
 {"ja":"かさ","la":"kasa","en":"umbrella"},
 {"ja":"ほん","la":"hon","en":"book"},
@@ -30,12 +30,12 @@
 {"ja":"なん","la":"nan","en":"what"},
 {"ja":"だれ","la":"dare","en":"who"},
 {"ja":"たいしかん","la":"taishikan","en":"embassy"},
-{"ja":"なんーばん","la":"nan-ban","en":"what number"},
+{"ja":"なんばん","la":"nan-ban","en":"what number"},
 {"ja":"てちょう","la":"techō","en":"datebook, small notebook, planner"},
 {"ja":"すみません","la":"sumimasen","en":"i'm sorry"},
-{"ja":"もう　いちーど　おねがいします","la":"dō ichi-do onegaishimasu","en":"one more time, please"},
-{"ja":"もう　いちーど","la":"mō ichi-do","en":"one more time"},
+{"ja":"もう　いちど　おねがいします","la":"dō ichi-do onegaishimasu","en":"one more time, please"},
+{"ja":"もう　いちど","la":"mō ichi-do","en":"one more time"},
 {"ja":"もう","la":"mō","en":"more"},
-{"ja":"いちーど","la":"ichi-do","en":"one time"}
+{"ja":"いちど","la":"ichi-do","en":"one time"}
 ]
 }

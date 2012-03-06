@@ -1,17 +1,33 @@
 {
-"source":"Sōkō Gakuen Hiragana Workbook",
+"source":"Sōkō Gakuen Hiragana Workbook WS #9",
 "creator":"siznax",
 "version":"2012",
 "cards": 
 [
-{"ja":"なに","la":"nani","en":"what"},
-{"ja":"ぬぐ","la":"nugu","en":"take off (clothing)"},
-{"ja":"ひふ","la":"hifu","en":"skin"},
-{"ja":"はね","la":"hane","en":"wing"},
-{"ja":"ほご","la":"hogo","en":"protection"},
-{"ja":"ばね","la":"bane","en":"spring"},
-{"ja":"ぶか","la":"buka","en":"subordinate"},
-{"ja":"のちほど","la":"nochihodo","en":"later"},
-{"ja":"べつべつ","la":"betsu betsu","en":"separate"}
+{"ja":"ふじ","la":"fuji","en":"wisteria"},
+{"ja":"のうさぎ","la":"nousagi","en":"jack rabbit"},
+{"ja":"ひび","la":"hibi","en":"cracks"},
+{"ja":"のばす","la":"nobasu","en":"to stretch"},
+{"ja":"かきね","la":"kakine","en":"fence/hedge"},
+{"ja":"のぶなが","la":"nobunaga","en":"given name"},
+{"ja":"のど","la":"nodo","en":"throat"},
+{"ja":"くぶ","la":"kubi","en":"the neck"},
+{"ja":"かび","la":"kabi","en":"mold/mildew"},
+{"ja":"はいく","la":"haiku","en":"Japanese poetry"},
+{"ja":"はしご","la":"hashigo","en":"ladders"},
+{"ja":"いぼ","la":"ibo","en":"warts"},
+{"ja":"のぎく","la":"nogiku","en":"chamomile"},
+{"ja":"へそ","la":"heso","en":"navel"},
+{"ja":"おび","la":"obi","en":"belt/sash"},
+{"ja":"たきび","la":"takibi","en":"bonfire"},
+{"ja":"ねぶそく","la":"nebusoku","en":"lack of sleep"},
+{"ja":"はばつ","la":"habatsu","en":"clique/faction"},
+{"ja":"ぬけげ","la":"nukege","en":"thinning hair"},
+{"ja":"ぺこぺこ","la":"pekopeko","en":"deflate, expand (onomatopoeia)"},
+{"ja":"ぽつぽつ","la":"potsupotsu","en":"little by little (onomatopoeia)"},
+{"ja":"ぴくぴく","la":"pikupiku","en":"bobbing movement (onomatopoeia)"},
+{"ja":"ねばねば","la":"nebaneba","en":"slimy/sticky (onomatopoeia)"},
+{"ja":"ぱくぱく","la":"pakupaku","en":"gobble, gobble (onomatopoeia)"},
+{"ja":"ぷくぷく","la":"pukupuku","en":"swell, swell (onomatopoeia)"}
 ]
 }

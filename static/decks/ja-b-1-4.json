@@ -1,16 +1,32 @@
 {
-"source":"Sōkō Gakuen Hiragana Workbook",
+"source":"Sōkō Gakuen Hiragana Workbook WS #12",
 "creator":"siznax",
 "version":"2012",
 "cards": 
 [
-{"ja":"ゆめ","la":"yume","en":"dreams"},
-{"ja":"まど","la":"mado","en":"window"},
-{"ja":"よく","la":"yoku","en":"often"},
-{"ja":"むすめ","la":"musume","en":"(my) daughter"},
-{"ja":"やさい","la":"yasai","en":"vegetable"},
-{"ja":"ゆのみ","la":"yunomi","en":"teacup"},
-{"ja":"みじかい","la":"mijikai","en":"short"},
-{"ja":"もしもし","la":"moshi moshi","en":"hello"}
+{"ja":"なまいき","la":"namaiki","en":"presumptuous"},
+{"ja":"はやし","la":"hayashi","en":"woods/grove"},
+{"ja":"こめ","la":"kome","en":"uncooked rice"},
+{"ja":"かま","la":"kama","en":"machete, iron pots"},
+{"ja":"ごま","la":"goma","en":"sesame seeds"},
+{"ja":"もち","la":"mochi","en":"rice cake"},
+{"ja":"めだか","la":"medaka","en":"minnows"},
+{"ja":"やくざ","la":"yakuza","en":"Japanese gangsters"},
+{"ja":"ものさし","la":"monosashi","en":"a ruler (measurement)"},
+{"ja":"やくそく","la":"yakusoku","en":"appointments"},
+{"ja":"がまぐち","la":"gamaguchi","en":"a change purse"},
+{"ja":"よこはま","la":"yokohama","en":"city in Japan"},
+{"ja":"やきもの","la":"yakimono","en":"pottery/china"},
+{"ja":"はままつ","la":"hamamatsu","en":"city in Japan"},
+{"ja":"もしもし","la":"moshimoshi","en":"Hello. Excuse me."},
+{"ja":"ゆか","la":"yuka","en":"floor"},
+{"ja":"なま","la":"nama","en":"uncooked/raw"},
+{"ja":"こま","la":"koma","en":"a top (toy)"},
+{"ja":"ゆかた","la":"yukata","en":"light cotton kimono"},
+{"ja":"そよかぜ","la":"soyokaze","en":"a breeze"},
+{"ja":"かみしばい","la":"kamishibai","en":"Japanese flash card story telling"},
+{"ja":"かもめ","la":"kamome","en":"seagulls"},
+{"ja":"あみもの","la":"amimono","en":"knitting"},
+{"ja":"やすみ","la":"yasumi","en":"recess/break"}
 ]
 }
