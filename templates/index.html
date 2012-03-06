@@ -12,16 +12,17 @@
     {% if not deck.meta.lang == prev_lang %}
         {% if count > 0 %}</ul>{% endif %}
         <h1>{{deck.meta.langstr}}</h1>
+        <i>level-section Source | [clues] &ndash; ncards</i>
         <ul>
     {% endif %}
-    <li><a href="{{base}}/{{deck.key}}">{{deck.key}}</a> 
+    <li>{{deck.meta.level}}-{{deck.meta.section}}
+    <a href="{{base}}/{{deck.key}}">{{deck.meta.source}}</a>
     {% for clue in deck.meta.clues %}
         {% if not clue == deck.meta.lang %}
             | <a href="{{base}}/{{deck.key}}/{{clue}}">{{clue}}</a>
         {% endif %}
     {% endfor %}
-    ({{deck.meta.count}})
-    {{deck.meta.source}}
+    &ndash; {{deck.meta.count}} cards
     </li>
     {% set prev_lang=deck.meta.lang %}
     {% set count=count+1 %}
