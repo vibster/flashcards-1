@@ -1,5 +1,6 @@
 body {
   font-family:Verdana,Arial,Helvetica;
+  margin:1em 2em;
 }
 A { 
   text-decoration:none; 
@@ -8,10 +9,9 @@ div#card {
   text-align:center;
 }
 div#index {
-  padding-left:15%;
-  width:65%;
 }
-#source,#pager,#order { 
+#source {
+  margin-bottom:1em;
 }
 #buttons {
   padding:1em;
