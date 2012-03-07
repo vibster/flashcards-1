@@ -1,8 +1,5 @@
 # flashcards
 
-* over 330 cards in Japanese Level 1
-* some Chinese cards
-
 provide a "deck" (see format below) and choose to show any of the clue
 keys provided with buttons to toggle the other keys.
 
