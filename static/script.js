@@ -1,7 +1,3 @@
-var base=window.location.origin;
-// var deckbase=base+"/static/decks"
-var deckbase=base+"/flashcards/static/decks"
-
 var keys = function(obj) {
     var k = [];
     for (var key in obj) {
@@ -104,6 +100,7 @@ var flashcards = function(rand) {
 }
 
 function init() {
+    var deckbase="http://localhost:5000/flashcards/static/decks"
     var deck = $("div#card").attr("deck");
     fc.setDeck(deckbase+'/'+deck+'.json');
     return true;
