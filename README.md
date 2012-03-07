@@ -1,6 +1,6 @@
 # flashcards
 
-provide a "deck" (see format below) and choose to show any of the clue
+provide a "[deck](https://github.com/siznax/flashcards/tree/master/static/decks)" (see format below) and choose to show any of the clue
 keys provided with buttons to toggle the other keys.
 
     http://localhost/<deck>/[clue]
