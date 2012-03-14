@@ -29,3 +29,9 @@ i hope you find the cards i'm using useful. contributions more than
 welcome. please fork or clone. 
 
 siznax 2012
+
+
+![](https://github.com/siznax/flashcards/raw/master/static/screen.png)
+
+
+
