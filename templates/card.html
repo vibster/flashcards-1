@@ -9,11 +9,11 @@
 {% if msg %}<div id="msg">{{msg}}</div>{% endif %}
 <div id="card" deck="{{meta.deck}}" clue="{{clue}}">
 <div id="source">
-<a href="{{base}}">{{meta.source}}</a> 
+<a href="{{base}}/{{meta.jsonurl}}">{{meta.source}}</a> 
 </div>
 
 <div id="pager">
- (<span id="num"></span>/<a href="{{base}}/{{meta.jsonurl}}"><span id="count"></span></a>)
+ (<span id="num"></span>/<span id="count"></span>)
  <input type="button" id="prev" value="prev"></input>
  <input type="button" id="next" value="next"></input>
 </div>
