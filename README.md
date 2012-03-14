@@ -1,45 +1,33 @@
 # flashcards
 
-provide a "[deck](https://github.com/siznax/flashcards/tree/master/static/decks)" (see format below) and choose to show any of the clue
-keys provided with buttons to toggle the other keys.
+provide a "deck" and choose to show any of the clue keys provided with
+buttons to toggle the other keys.
 
-    http://localhost/<deck>/[clue]
+these flashcards differ from most web-based flashcards in that it
+offers any number of clues on each card. in the case of Japanese
+flashcards, you can select Japanese (ja), the English (en)
+translation, or the Latin (la) transliteration as your clue. buttons
+appear for each of the other clues so that they can be exposed in a
+"sticky" manner. each page load shufffles the deck in random
+order. the list below the clues highlights which card is currently
+displayed. you can expose other clues or visit a popular online
+dictionary for the term. reload to shuffle.
 
 let's say you'd like to practice writing the characters for the words
 in level 1, section 1 of Japanese source "A", then you could choose
-the Romaji [la] \(latin romanization\) clue and get toggle buttons for
-Japanese [ja] and English [en] with:
+the [la] \(latin romanization\) clue and get toggle buttons for
+Japanese [ja] and English [en] with
+<tt>http://flashcards.site.tld/ja-a-1-1/la</tt> 
 
-    http://localhost/ja-a-1-1/rj
+each "deck" is a JSON file (see this
+[example](https://github.com/siznax/flashcards/tree/master/static/decks))
+that specifies several clues for each card. in this case "ja" for
+Japanese, "en" for English, and "la" for the Latin
+transliteration. but there's no reason each deck couldn't be extended
+with say French (fr), Spanish (es), and Russian (ru) clues too!
 
-the deck {lang} is the default clue. reload to shuffle!
-
-# TODO
-
-    [ ] make "lang" abstract, i.e. "subj", "subjstr"
-    [ ] consider ordered "clues" member in deck JSON
-    [ ] keyboard shortcuts
-
-## deck format
-
-    decks/{lang}-{source}-{level}-{section}.json:
-
-```json
-{ "source":"text or workbook",
-  "creator":"user id",
-  "version":"year",
-  "cards":
-  [
-    { "ja":"日本語", 
-      "la":"latin (romaji)",
-      "en":"english" },
-  ]
-}
-```
-
-## screenshot
-
-![screen](https://github.com/siznax/flashcards/raw/master/static/screen.png)
-
+i hope you find the cards i'm using useful. contributions, comments,
+corrections, and suggestions more than welcome. please fork or clone
+siznax/flashcards.
 
 siznax 2012
