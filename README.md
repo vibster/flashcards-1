@@ -23,7 +23,7 @@ each "deck" is a JSON file (see this
 [example](https://github.com/siznax/flashcards/tree/master/static/decks))
 that specifies several clues for each card, but **there's no reason each
 deck couldn't be extended with say French (fr), Spanish (es), and
-Russian (ru) clues too**
+Russian (ru) clues too.**
 
 i hope you find the cards i'm using useful. contributions more than
 welcome. please fork or clone. 
