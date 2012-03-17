@@ -106,16 +106,37 @@ if (typeof String.prototype.startsWith != 'function') {
     };
 }
 
+// If the UserAgent is not "Nintendo 3DS"
+function userAgentIsNintendo3DS() {
+    if (navigator.userAgent.indexOf('Nintendo 3DS') == -1)
+    {
+        return false;
+    }
+    return true;
+}
+
 function init() {
-    var origin = window.location.origin
-    var pathname = window.location.pathname
+
+    if (userAgentIsNintendo3DS()) {
+        var body = document.getElementsByTagName("body")[0];
+        body.style.fontSize="32px";
+        inputs = document.getElementsByTagName("input");
+        for (var i=0; i< inputs.length; i++) {
+            inputs[i].style.fontSize="32px";
+	}
+    }
+
+    var origin = window.location.origin;
+    var pathname = window.location.pathname;
     if (pathname.startsWith("/flashcards")) {
         var deckbase = origin + "/flashcards/static/decks";
     } else {
         var deckbase = origin + "/static/decks";
     }
     var deck = $("div#card").attr("deck");
-    fc.setDeck(deckbase+'/'+deck+'.json');
+    if (deck) {
+        fc.setDeck(deckbase+'/'+deck+'.json');
+    }
     return true;
 }
 
@@ -125,9 +146,11 @@ $(document).ready(function() {
 
     init();
 
-    var r = $.getJSON(fc.deck, function(data) { fc.setJSON(data); })
-        .success(function() {})
-	.error(function(err) { alert('ERR: could not load deck: '+fc.deck) });
+    if (fc.deck) {
+        var r = $.getJSON(fc.deck, function(data) { fc.setJSON(data); })
+            .success(function() {})
+    	    .error(function(err) { alert('ERR: could not load deck: '+fc.deck) });
+    }
 
     $("input#next").click(function() {
 	if (fc.cards==null) { $("div#msg").html('hmph!'); return false; }
