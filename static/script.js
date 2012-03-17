@@ -99,8 +99,21 @@ var flashcards = function(rand) {
     }
 }
 
+// http://stackoverflow.com/questions/646628/javascript-startswith
+if (typeof String.prototype.startsWith != 'function') {
+    String.prototype.startsWith = function (str){
+	return this.indexOf(str) == 0;
+    };
+}
+
 function init() {
-    var deckbase="http://localhost:5000/flashcards/static/decks"
+    var origin = window.location.origin
+    var pathname = window.location.pathname
+    if (pathname.startsWith("/flashcards")) {
+        var deckbase = origin + "/flashcards/static/decks";
+    } else {
+        var deckbase = origin + "/static/decks";
+    }
     var deck = $("div#card").attr("deck");
     fc.setDeck(deckbase+'/'+deck+'.json');
     return true;
