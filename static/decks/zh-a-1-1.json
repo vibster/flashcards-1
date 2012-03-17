@@ -1,19 +1,17 @@
 {
 "source":"Practical Chinese Reader",
+"section":"Lesson 1",
 "creator":"siznax",
 "version":"2012",
 "cards": 
 [
 {"zh":"你","la":"nǐ","en":"you (sing.)"},
 {"zh":"好","la":"hǎo","en":"good, well"},
-
 {"zh":"嗎","la":"ma","en":"interrogative particle"},
 {"zh":"我","la":"wǒ","en":"I, me"},
 {"zh":"很","la":"hěn","en":"very"},
 {"zh":"呢","la":"ne","en":"a modal particle"},
 {"zh":"也","la":"yě","en":"also, too"},
-
 {"zh":"","la":"","en":""}
-
 ]
 }
