@@ -14,7 +14,7 @@ div#card { text-align:center; }
 #la { font-size:2em; color:#3E4349; }
 .clue { font-size:5em; font-weight:bold; }
 #ja {
-  font-family:"Hiragino Kaku Gothic Std","serif";
+  font-family:"Hiragino Kaku Gothic Std","Mplus";
   font-size:3em;
 }
 #zh {
@@ -28,3 +28,9 @@ div#card { text-align:center; }
 TABLE.source { border-collapse:collapse; margin:0 1em; }
 TABLE.source TR:hover { background:lavender; }
 TABLE.source TD { border:1px solid silver; padding:0.1em 0.4em; }
+
+@font-face {
+  /* http://mplus-fonts.sourceforge.jp/webfonts/ */
+  src: url(http://mplus-fonts.sourceforge.jp/webfonts/mplus-2c-black.ttf) format("truetype");
+  font-family: "Mplus";
+}
