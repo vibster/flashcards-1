@@ -1,25 +1,18 @@
-body {
-  font-family:Verdana,Arial,Helvetica;
-  margin:1em 2em;
+@media handheld {
 }
-A { 
-  text-decoration:none; 
+@media screen {
+  body { margin:1em 2em; }
 }
-div#card {
-  text-align:center;
-}
-div#index {
-}
-#source {
-  margin-bottom:1em;
-}
-#buttons {
-  padding:1em;
-}
-#dict { 
-  padding:0.6em; 
-  font-weight:bold; 
-} 
+body { font-family:Verdana,Arial,Helvetica; }
+A { text-decoration:none; }
+div#card { text-align:center; }
+#source { margin-bottom:1em; }
+#buttons { padding:1em; }
+#dict { padding:0.6em; font-weight:bold; } 
+
+#en { font-size:2em; color:silver; font-style:italic; }
+#la { font-size:2em; color:#3E4349; }
+.clue { font-size:5em; font-weight:bold; }
 #ja {
   font-family:"Hiragino Kaku Gothic Std","serif";
   font-size:3em;
@@ -28,21 +21,10 @@ div#index {
   font-family:"STKaiti","serif";
   font-size:10em;
 }
-#la { 
-  font-size:2em;
-  color:#3E4349;
-}
-#en {
-  font-size:2em;
-  color:silver;
-  font-style:italic;
-}
-.clue {
-  font-size:5em;
-  font-weight:bold;
-}
-#order {
-  padding:1em;
-  color:silver;
-}
+
+#order { padding:1em; color:silver; }
 #order b { color:black; } 
+
+TABLE.source { border-collapse:collapse; margin:0 1em; }
+TABLE.source TR:hover { background:lavender; }
+TABLE.source TD { border:1px solid silver; padding:0.1em 0.4em; }

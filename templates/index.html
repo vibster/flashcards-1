@@ -4,31 +4,43 @@
 <link rel="stylesheet" type="text/css" href="{{base}}/static/style.css"></link>
 </head>
 <body>
-<div id="index">
 {% if msg %}<div id="msg">{{msg}}</div>{% endif %}
+<div id="index">
 {% set count=0 %}
 {% set prev_lang="" %}
+{% set prev_source="" %}
 {% for deck in decks %}
     {% if not deck.meta.lang == prev_lang %}
-        {% if count > 0 %}</ol>{% endif %}
-        <h1>{{deck.meta.langstr}}</h1>
-        <i>level-section Source | [clues] &ndash; ncards</i>
-        <ol>
+        {% if count > 0 %}</table>{% endif %}
+        <h2>{{deck.meta.langstr}}</h2>
+        <table class="source">
+        {% set prev_source="" %}
     {% endif %}
-    <li>{{deck.meta.level}}-{{deck.meta.section}}
-    <a href="{{base}}/{{deck.key}}">{{deck.meta.source}}</a>
+    {% if not deck.meta.source == prev_source %}
+        {% if prev_source %}
+            </table>
+            <p><i>{{deck.meta.source}}</i></p>
+            <table class="source">
+        {% else %}
+            <p><i>{{deck.meta.source}}</i></p>
+        {% endif %}
+    {% endif %}
+    <tr>
+    <td><a href="{{base}}/{{deck.key}}">{{deck.meta.section}}</a></td>
     {% for clue in deck.meta.clues %}
         {% if not clue == deck.meta.lang %}
-            | <a href="{{base}}/{{deck.key}}/{{clue}}">{{clue}}</a>
+            <td><a href="{{base}}/{{deck.key}}/{{clue}}">{{clue}}</a></td>
         {% endif %}
     {% endfor %}
-    &ndash; {{deck.meta.count}} cards
-    </li>
+    <td>({{deck.meta.count}})</td>
+    </tr>
     {% set prev_lang=deck.meta.lang %}
+    {% set prev_source=deck.meta.source %}
     {% set count=count+1 %}
 {% endfor %}
-</ol>
-<p><a href="https://github.com/siznax/flashcards">github.com/siznax/flashcards</a></p>
+</tr>
+</table>
+<p style="margin:2em 0em;"><a href="https://github.com/siznax/flashcards">github.com/siznax/flashcards</a></p>
 </div>
 </body>
 </html>

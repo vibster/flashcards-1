@@ -67,11 +67,11 @@ class Flashcards:
         self.meta = {'deck'   :self.deck,
                      'jsonurl':self.jsonurl,
                      'source' :self.json["source"],
+                     'section':self.json["section"],
                      'creator':self.json["creator"],
                      'version':self.json["version"],
                      'srcref' :self.deck.split('-')[1],
                      'level'  :self.deck.split('-')[2],
-                     'section':self.deck.split('-')[3],
                      'lang'   :self.lang,
                      'langstr':self.lang_code[self.lang],
                      'dict'   :self.dict_href(),
@@ -99,9 +99,13 @@ class Flashcards:
             except:
                 msg = "ERROR: could not load %s" % (self.deck)
                 return render_template("error.html",msg=msg)
-            self.set_meta()
+            try:
+                self.set_meta()
+            except:
+                msg = "ERROR parsing: %s" % (self.deck)
+                return render_template("error.html",msg=msg)
             decks.append({'key':key,'meta':self.meta})
         return render_template("index.html",
-                               msg = self.msg,
+                               msg = request.host,
                                base = self.template_base,
                                decks = decks)
