@@ -28,7 +28,7 @@
         {% endif %}
     {% endif %}
     <tr>
-    <td><a href="{{base}}/{{deck.key}}">{{deck.meta.section}}</a></td>
+    <td><a href="{{base}}/{{deck.key}}/">{{deck.meta.section}}</a></td>
     {% for clue in deck.meta.clues %}
         {% if not clue == deck.meta.lang %}
             <td><a href="{{base}}/{{deck.key}}/{{clue}}">{{clue}}</a></td>
